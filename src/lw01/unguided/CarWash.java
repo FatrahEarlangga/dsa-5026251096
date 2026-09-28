@@ -18,5 +18,4 @@ private int units;
     public String label() {
         return "Car Wash";
     }
-
 }
