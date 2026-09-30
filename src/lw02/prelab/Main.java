@@ -9,7 +9,8 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         LinkedList<String[]> transactions = new LinkedList<>();
-        Scanner scanner = new Scanner(Main.class.getResourceAsStream("/lw02/prelab/transactions.txt"));
+        Scanner scanner = new Scanner(
+            Main.class.getResourceAsStream("/lw02/prelab/transactions.txt"));
         while (scanner.hasNext()) {
             String name = scanner.next();
             String type = scanner.next();
