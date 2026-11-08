@@ -4,12 +4,10 @@ import java.util.Scanner;
 
 public class Main {
 
-    // Insertion sort descending, berhenti setelah sejumlah "passes"
     static void insertionSort(int[] a, int passes) {
         for (int i = 1; i <= passes; i++) {
             int key = a[i];
             int j = i - 1;
-            // geser elemen di kiri yang lebih kecil dari key ke kanan
             while (j >= 0 && a[j] < key) {
                 a[j + 1] = a[j];
                 j--;
@@ -18,7 +16,6 @@ public class Main {
         }
     }
 
-    // Linear search: return index kalau ketemu, -1 kalau tidak
     static int linearSearch(int[] a, int target) {
         for (int i = 0; i < a.length; i++) {
             if (a[i] == target) {
@@ -46,7 +43,6 @@ public class Main {
 
         insertionSort(branches, 3);
 
-        // tampilkan array setelah 3 pass
         for (int i = 0; i < n; i++) {
             if (i > 0) {
                 System.out.print(" ");
@@ -55,7 +51,6 @@ public class Main {
         }
         System.out.println();
 
-        // cari tiap target sesuai urutan di file
         for (int i = 0; i < m; i++) {
             int idx = linearSearch(branches, targets[i]);
             if (idx == -1) {
